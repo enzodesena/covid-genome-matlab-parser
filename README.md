@@ -56,4 +56,4 @@ The project uses:
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License. The data and the sofware are provided as they are without warranty of any kind (see [LICENSE.md](LICENSE.md) for details).
