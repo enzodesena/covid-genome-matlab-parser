@@ -1,4 +1,4 @@
-updated: 'Thursday Apr 16 14:15 2020 EST'
+updated: 'Friday Apr 17 10:10 2020 EST'
 
 genbank-sequences:
 - accession: MN908947
@@ -6995,6 +6995,299 @@ genbank-sequences:
   locality:
     country: USA
     state: ID 
+
+- accession: MT350234
+  gene-region: complete
+  collection-date: 2020-01
+  locality:
+    country: China
+    state: Nanchang 
+
+- accession: MT350236
+  gene-region: complete
+  collection-date: 2020-03
+  locality:
+    country: USA
+    state: VA 
+
+- accession: MT350237
+  gene-region: complete
+  collection-date: 2020-03
+  locality:
+    country: USA
+    state: VA 
+
+- accession: MT350238
+  gene-region: complete
+  collection-date: 2020-03
+  locality:
+    country: USA
+    state: VA 
+
+- accession: MT350239
+  gene-region: complete
+  collection-date: 2020-03
+  locality:
+    country: USA
+    state: VA 
+
+- accession: MT350240
+  gene-region: complete
+  collection-date: 2020-03
+  locality:
+    country: USA
+    state: VA 
+
+- accession: MT350241
+  gene-region: complete
+  collection-date: 2020-03
+  locality:
+    country: USA
+    state: VA 
+
+- accession: MT350242
+  gene-region: complete
+  collection-date: 2020-03
+  locality:
+    country: USA
+    state: VA 
+
+- accession: MT350243
+  gene-region: complete
+  collection-date: 2020-03
+  locality:
+    country: USA
+    state: VA 
+
+- accession: MT350244
+  gene-region: complete
+  collection-date: 2020-03
+  locality:
+    country: USA
+    state: VA 
+
+- accession: MT350245
+  gene-region: complete
+  collection-date: 2020-03
+  locality:
+    country: USA
+    state: VA 
+
+- accession: MT350246
+  gene-region: complete
+  collection-date: 2020-04
+  locality:
+    country: USA
+    state: VA 
+
+- accession: MT350247
+  gene-region: complete
+  collection-date: 2020-03
+  locality:
+    country: USA
+    state: VA 
+
+- accession: MT350248
+  gene-region: complete
+  collection-date: 2020-03
+  locality:
+    country: USA
+    state: VA 
+
+- accession: MT350249
+  gene-region: complete
+  collection-date: 2020-03
+  locality:
+    country: USA
+    state: VA 
+
+- accession: MT350250
+  gene-region: complete
+  collection-date: 2020-03
+  locality:
+    country: USA
+    state: VA 
+
+- accession: MT350251
+  gene-region: complete
+  collection-date: 2020-03
+  locality:
+    country: USA
+    state: VA 
+
+- accession: MT350252
+  gene-region: complete
+  collection-date: 2020-03
+  locality:
+    country: USA
+    state: VA 
+
+- accession: MT350253
+  gene-region: complete
+  collection-date: 2020-04
+  locality:
+    country: USA
+    state: VA 
+
+- accession: MT350254
+  gene-region: complete
+  collection-date: 2020-04
+  locality:
+    country: USA
+    state: VA 
+
+- accession: MT350255
+  gene-region: complete
+  collection-date: 2020-04
+  locality:
+    country: USA
+    state: VA 
+
+- accession: MT350256
+  gene-region: complete
+  collection-date: 2020-04
+  locality:
+    country: USA
+    state: VA 
+
+- accession: MT350257
+  gene-region: complete
+  collection-date: 2020-04
+  locality:
+    country: USA
+    state: VA 
+
+- accession: MT350263
+  gene-region: complete
+  collection-date: 2020-03-19
+  locality:
+    country: USA
+    state: WA 
+
+- accession: MT350264
+  gene-region: complete
+  collection-date: 2020-03-19
+  locality:
+    country: USA
+    state: WA 
+
+- accession: MT350265
+  gene-region: complete
+  collection-date: 2020-03-19
+  locality:
+    country: USA
+    state: WA 
+
+- accession: MT350266
+  gene-region: complete
+  collection-date: 2020-03-19
+  locality:
+    country: USA
+    state: WA 
+
+- accession: MT350267
+  gene-region: complete
+  collection-date: 2020-03-19
+  locality:
+    country: USA
+    state: WA 
+
+- accession: MT350268
+  gene-region: complete
+  collection-date: 2020-03-19
+  locality:
+    country: USA
+    state: WA 
+
+- accession: MT350269
+  gene-region: complete
+  collection-date: 2020-03-20
+  locality:
+    country: USA
+    state: WA 
+
+- accession: MT350270
+  gene-region: complete
+  collection-date: 2020-03-19
+  locality:
+    country: USA
+    state: WA 
+
+- accession: MT350271
+  gene-region: complete
+  collection-date: 2020-03-20
+  locality:
+    country: USA
+    state: WA 
+
+- accession: MT350272
+  gene-region: complete
+  collection-date: 2020-03-19
+  locality:
+    country: USA
+    state: WA 
+
+- accession: MT350273
+  gene-region: complete
+  collection-date: 2020-03-19
+  locality:
+    country: USA
+    state: WA 
+
+- accession: MT350274
+  gene-region: complete
+  collection-date: 2020-03-19
+  locality:
+    country: USA
+    state: WA 
+
+- accession: MT350275
+  gene-region: complete
+  collection-date: 2020-03-19
+  locality:
+    country: USA
+    state: WA 
+
+- accession: MT350276
+  gene-region: complete
+  collection-date: 2020-03-19
+  locality:
+    country: USA
+    state: WA 
+
+- accession: MT350277
+  gene-region: complete
+  collection-date: 2020-03-19
+  locality:
+    country: USA
+    state: WA 
+
+- accession: MT350278
+  gene-region: complete
+  collection-date: 2020-03-19
+  locality:
+    country: USA
+    state: WA 
+
+- accession: MT350279
+  gene-region: complete
+  collection-date: 2020-03-19
+  locality:
+    country: USA
+    state: WA 
+
+- accession: MT350280
+  gene-region: complete
+  collection-date: 2020-03-19
+  locality:
+    country: USA
+    state: WA 
+
+- accession: MT350282
+  gene-region: complete
+  collection-date: 2020-03-18
+  locality:
+    country: Brazil
 
 sra-accessions:
 - bioproject: PRJNA601736
