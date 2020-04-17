@@ -16,7 +16,7 @@ function datasets = step_3_bundle_datasets(parser_settings)
 
 %% Load settings
 if nargin < 1
-    parser_settings = default_settings();
+    parser_settings = default_parser_settings();
 end
 
 %% Load datasets

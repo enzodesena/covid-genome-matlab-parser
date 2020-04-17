@@ -19,10 +19,9 @@ function step_2_add_latlon_to_datasets(google_API_key, parser_settings)
 
 %% Load settings
 if nargin == 0
-    error('You need a Google Maps API key to run this script. ' + ...
-        'Remember also that running this step is optional');
+    error('You need a Google Maps API key to run this script. Remember also that running this step is optional');
 elseif nargin == 1
-    parser_settings = default_settings();
+    parser_settings = default_parser_settings();
 end
 
 %% Run query to google maps API for each

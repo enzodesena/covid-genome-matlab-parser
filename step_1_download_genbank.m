@@ -16,7 +16,7 @@ function step_1_download_genbank(parser_settings)
 
 %% Load settings
 if nargin < 1
-    parser_settings = default_settings();
+    parser_settings = default_parser_settings();
 end
 
 if ~exist(parser_settings.dataset_directory_name, 'dir')

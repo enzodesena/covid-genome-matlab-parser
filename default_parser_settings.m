@@ -6,7 +6,7 @@
 %   Date: 8/4/2020
 %   License: MIT
 
-function parser_settings = default_settings()
+function parser_settings = default_parser_settings()
 parser_settings = struct;
 
 % This is the URL of the NCBI YAML file containing all the COVID-19
