@@ -26,7 +26,7 @@ In order to avoid repetition of operations that are costly either in terms of co
 
 * **step_1_download_genbank** - This will download all the sequences into a directory `dataset` as individual `.mat` files. Re-running this script will only download files that are not present in the `dataset` directory, so you can run it again to keep your dataset up-to-date with the NCBI dataset. The NCBI database is currently experiencing a high volume of searches, especially for the more recent COVID-19 sequences, and running ``download_genbank`` currently takes some time (about an hour). The code has provision to wait a given amount of time between searches so as to reduce the load.
 * **step_2_add_latlong_to_dataset** - This step is **optional** and is only needed if you also want to add the latitude and longitude of the locality of individual sequences to the individual datasets. This uses Google Maps API's; if you don't have it already, you'll need to create your own account with Google at [Google Maps Platform](https://cloud.google.com/maps/official).
-* **step_3_bundle_datasets** - This script reads the dataset folders and returns a struct array containing all the datasets. The datasets are returned in chronological order according to the collection data.
+* **step_3_bundle_datasets** - This script reads the dataset folders and returns a struct array containing all the datasets. The datasets are returned in chronological order according to the collection data. If you only want to use the data that is already contained in this repository, this is the only step you need to run.
 
 ### Structure of dataset
 
