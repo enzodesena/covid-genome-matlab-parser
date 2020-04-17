@@ -32,7 +32,7 @@ In order to avoid repetition of operations that are costly either in terms of co
 
 For each entry in the NCBI database, the following information is available:
 * **`accession`** - This is the string identifying the specific genome of this entry. 
-* **`collection_date` - This is the date of collection, in Matlab's datenum format. To convert to a readable quantity you can run `datetime(double(dataset.collection_date),'ConvertFrom','datenum');`
+* **`collection_date`** - This is the date of collection, in Matlab's datenum format. To convert to a readable quantity you can run `datetime(double(dataset.collection_date),'ConvertFrom','datenum');`
 * **`genebank_entry`** - This contains the genome bank entry returned by the NCBI database; **to access the genomic RNA sequence, you'll refer to `dataset.genebank_entry.Sequence`**.
 * **`locality`** - This is the locality of collection (or processing? I am unsure) of the specific genome. When available, not only the country, but also the region/state is specified; in that case, the country and the region/state are separated by a comma. 
 * **`latitude`** - The approximate latitude corresponding to the locality (this is only available if step 2 was run).
@@ -43,8 +43,7 @@ If you use step 3 to access the data, everything will be indexed accordingly. So
 
 ## Contributing
 
-Please keep the coding convention.
-
+Pull requests are welcome.
 
 ## Authors
 
@@ -52,7 +51,6 @@ Please keep the coding convention.
 
 The project uses:
 * **Yauhen Yakimovich**'s *yamlmatlab* [Github repo](https://github.com/ewiger/yamlmatlab)
-* **Joel Feenstra**'s *parse_json* [Mathworks File Exchange](https://mathworks.com/matlabcentral/fileexchange/20565-json-parser)
 * **Joel Feenstra**'s *parse_json* [Mathworks File Exchange](https://mathworks.com/matlabcentral/fileexchange/20565-json-parser)
 
 
