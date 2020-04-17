@@ -1,6 +1,6 @@
 # COVID-19 genome Matlab parser
 
-This project parses and downloads all the genomic sequences of COVID-19 that were made available by research centres across the world via the website of the National Center for Biotechnology Information (NCBI): [Covid-19 page](https://www.ncbi.nlm.nih.gov/genbank/sars-cov-2-seqs/).
+This project parses and downloads all the genomic sequences of COVID-19 that were made available by research centres across the world via the website of the National Center for Biotechnology Information (NCBI): [Covid-19 page](https://www.ncbi.nlm.nih.gov/genbank/sars-cov-2-seqs/). In order to reduce stress on the NCBI database, this repo already contains the data up to the time of the latest commit. 
 
 
 
