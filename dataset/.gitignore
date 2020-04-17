@@ -1,0 +1,5 @@
+*/DS_Store
+output/*
+!output/.gitignore
+dataset/*
+!dataset/.gitignore

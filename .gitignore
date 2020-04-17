@@ -1,0 +1,8 @@
+**/.DS_Store
+*~
+output/*
+!output/.gitignore
+yamlmatlab/tags
+yamlmatlab/branches/
+yamlmatlab/trunk/Tests/
+**.svn
