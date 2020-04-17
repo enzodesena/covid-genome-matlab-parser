@@ -11,7 +11,7 @@
 % Date: 17/4/2020
 % License: MIT
 
-function datasets = step_3_bundle_datasets(parser_settings)
+function [datasets, collection_dates] = step_3_bundle_datasets(parser_settings)
 
 
 %% Load settings
@@ -36,10 +36,11 @@ for n=1:num_files
     filepath = strcat(parser_settings.dataset_directory_name, filename);
     dataset = load(filepath);
     
-    if length(dataset.collection_date) > 1
+    if length(dataset.collection_date) > 1 || ...
+       dataset.collection_date < datenum('01-Jan-2001', 'dd-mmm-yyyy')
         warning(strcat('Dataset with accession n.',dataset.accession, ...
             ' was ignored because collection date is incomplete, ',...
-            'not allowing sorting of dates.'));
+            'which will not allow sorting dates.'));
         continue;
     end
 
@@ -52,7 +53,7 @@ end
 
 
 %% Sort according to collection date
-[~, sorting_indices] = sort(collection_dates);
+[collection_dates, sorting_indices] = sort(collection_dates);
 datasets = datasets(sorting_indices);
 
 
