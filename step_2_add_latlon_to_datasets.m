@@ -39,9 +39,11 @@ for n=1:num_files
     filepath = strcat(parser_settings.dataset_directory_name, filename);
     dataset = load(filepath);
  
-    locality = dataset.locality;
     disp('-------');
-    disp(strcat('Handling accession: ', dataset.accession, '; locality: ',locality));
+    disp(strcat('Handling filepath: ', filepath));
+    disp(strcat('Accession: ', dataset.accession));
+    locality = dataset.locality;
+    disp(strcat('Locality: ', locality));
     
     if isfield(dataset, 'latitude')
         disp(strcat('Ignored because lat/lon already present. Latitude: ', num2str(dataset.latitude), ', longitude: ', num2str(dataset.longitude)));

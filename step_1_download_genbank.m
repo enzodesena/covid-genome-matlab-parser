@@ -44,6 +44,8 @@ for n=1:N
     handle_genbank_entry(gene_struct, parser_settings)
 end
 
+disp('-------');
+disp(strcat('Done! Handled n.',num2str(N),' accessions'));
 
 
 
@@ -111,4 +113,3 @@ while (~was_downloaded)
         end
     end
 end
-
