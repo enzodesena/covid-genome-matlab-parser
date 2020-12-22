@@ -66,9 +66,7 @@ while (~was_downloaded)
         genbank_entry = getgenbank(accession);
         was_downloaded = 1;
         disp('Download successful! Saving... ');
-        
-        handle_genbank_entry(genbank_entry, filepath, parser_settings);
-    catch
+    catch exception
         try_count = try_count + 1;
         if try_count <= parser_settings.max_num_download_attempts
             warning('Attempt failed. Waiting and trying again...');
@@ -77,6 +75,10 @@ while (~was_downloaded)
             warning('Too many attempts failed. Giving up on this entry.');
             return;
         end
+    end
+    
+    if was_downloaded
+        handle_genbank_entry(genbank_entry, filepath, parser_settings);
     end
 end
 
@@ -93,21 +95,30 @@ end
 
 [collection_date, locality, is_homo_sapiens] = get_features(genbank_entry.Features);
 
-collection_date = datenum(collection_date, 'yyyy-mmm-dd');
 
-if isempty(collection_date) || ... 
-   isempty(locality)
-    disp('Ignored because of a field missing');
+if isempty(collection_date)
+    disp('Ignored because collection date missing');
     return;
 end
+
+if isempty(locality)
+    disp('Ignored because locality date missing');
+    return;
+end
+
+if strlength(collection_date) ~= 10
+    disp(strcat('Ignored because collection date incorrectly formatted:"',collection_date,'"'));
+    return;
+end
+
+collection_date = datenum(collection_date, 'yyyy-mmm-dd');
 
 if ~is_homo_sapiens
     disp('Ignored because not homo sapiens');
     return;
 end
 
-save(filepath, 'genbank_entry', 'locality', 'collection_date', ...
-             'accession');
-         
+save(filepath, 'genbank_entry', 'locality', 'collection_date', 'accession');
+
 disp('Saved successfully!');
 
