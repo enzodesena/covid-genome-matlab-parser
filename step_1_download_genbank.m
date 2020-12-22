@@ -33,16 +33,34 @@ disp('Download completed!');
 % %% Read TXT file
 f_id = fopen(txt_filename);
 accession = fgetl(f_id);
+accessions = string([]);
 while ischar(accession)
+    
     if ~strcmp(accession, 'id')
-        handle_accession_entry(accession, parser_settings)
+        accessions = [accessions; accession];
     end
     accession = fgetl(f_id);
 end
 fclose(f_id);
 
+N = length(accessions);
+
+
+% Open matlab pool to speed up
+if isempty(gcp('nocreate'))
+    parpool('local');
+end
+num_workers = Inf;
+
+parfor (n=1:N, num_workers)
+    handle_accession_entry(accessions(n), parser_settings)
+end
+
 disp('-------');
 disp(strcat('Done! Handled n.',num2str(N),' accessions'));
+
+
+%% 
 
 function handle_accession_entry(accession, parser_settings)
 disp('-------');
@@ -82,6 +100,8 @@ while (~was_downloaded)
     end
 end
 
+
+%% 
 
 function handle_genbank_entry(genbank_entry, filepath, parser_settings)
 
