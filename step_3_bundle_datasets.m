@@ -48,7 +48,16 @@ for n=1:num_files
     collection_date = datetime(double(dataset.collection_date),'ConvertFrom','datenum');
 
     if isfield(dataset, 'gene_struct')
-        dataset = rmfield(dataset, 'gene_struct')
+        dataset = rmfield(dataset, 'gene_struct');
+    end
+    
+    if isfield(dataset, 'to_be_ignored') 
+        if dataset.to_be_ignored
+            warning(strcat('Dataset with accession n.',dataset.accession, ' was ignored.'));
+            continue;
+        else
+            dataset = rmfield(dataset, 'to_be_ignored');
+        end
     end
     
     collection_dates = [collection_dates, collection_date];

@@ -12,7 +12,7 @@
 %   Date: 22/12/2020
 %   License: MIT
 
-function step_1_download_genbank_txt(parser_settings)
+function step_1_download_genbank(parser_settings)
 
 %% Load settings
 if nargin < 1
@@ -86,39 +86,41 @@ end
 function handle_genbank_entry(genbank_entry, filepath, parser_settings)
 
 accession = genbank_entry.LocusName;
+to_be_ignored = false;
 
 if parser_settings.ignore_sequence_if_incomplete && ...
         isempty(strfind(genbank_entry.Definition, 'complete genome'))
-    disp('Ignored because gene is not complete');
-    return
+    disp('Tagged to be ignored because gene is not complete');
+    to_be_ignored = true;
 end
 
 [collection_date, locality, is_homo_sapiens] = get_features(genbank_entry.Features);
 
-
 if isempty(collection_date)
-    disp('Ignored because collection date missing');
-    return;
+    disp('Tagged to be ignored because collection date missing');
+    to_be_ignored = true;
 end
 
 if isempty(locality)
-    disp('Ignored because locality date missing');
-    return;
+    disp('Tagged to be ignored because locality date missing');
+    to_be_ignored = true;
 end
 
 if strlength(collection_date) ~= 10
-    disp(strcat('Ignored because collection date incorrectly formatted:"',collection_date,'"'));
-    return;
+    disp(strcat('Tagged to be ignored because collection date incorrectly formatted:"',collection_date,'"'));
+    to_be_ignored = true;
+    collection_date = 0;
+else
+    collection_date = datenum(collection_date, 'yyyy-mmm-dd');
 end
 
-collection_date = datenum(collection_date, 'yyyy-mmm-dd');
 
 if ~is_homo_sapiens
-    disp('Ignored because not homo sapiens');
-    return;
+    disp('Tagged to be ignored because not homo sapiens');
+    to_be_ignored = true;
 end
 
-save(filepath, 'genbank_entry', 'locality', 'collection_date', 'accession');
+save(filepath, 'genbank_entry', 'locality', 'collection_date', 'accession', 'to_be_ignored');
 
 disp('Saved successfully!');
 

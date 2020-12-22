@@ -19,7 +19,12 @@ for n=1:N_lines
     elseif contains(string, pattern_homo_sapiens)
         is_homo_sapiens = true;
     elseif contains(string, pattern_country)
+        
         locality = extractBetween(string, pattern_country, '"');
-        locality = locality{1};
+        if isempty(locality) % multiline country
+            locality = string((strfind(string, pattern_country)+length(pattern_country)):end);
+        else 
+            locality = locality{1};
+        end
     end
 end
