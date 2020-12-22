@@ -11,7 +11,9 @@ parser_settings = struct;
 
 % This is the URL of the NCBI YAML file containing all the COVID-19
 % sequences.
-parser_settings.ncbi_ncov_seq_url = 'https://www.ncbi.nlm.nih.gov/projects/genome/sars-cov-2-seqs/ncov-sequences.yaml';
+parser_settings.ncbi_ncov_seq_url_yaml = 'https://www.ncbi.nlm.nih.gov/projects/genome/sars-cov-2-seqs/ncov-sequences.yaml';
+parser_settings.ncbi_ncov_seq_url_txt = 'https://www.ncbi.nlm.nih.gov/sars-cov-2/download-nuccore-ids/';
+
 
 % The maximum number of download attempts before giving up.
 parser_settings.max_num_download_attempts = 30;

@@ -29,7 +29,7 @@ for n=1:num_files
     filename = dataset_folder_contents(n).name;
     
     % Exclude current directory and yaml file in directory
-    if startsWith(filename, '.') || endsWith(filename, '.yaml')
+    if startsWith(filename, '.') || endsWith(filename, '.yaml') || endsWith(filename, '.txt')
        continue; 
     end
     
@@ -47,6 +47,10 @@ for n=1:num_files
     assert(isfield(dataset, 'collection_date'));
     collection_date = datetime(double(dataset.collection_date),'ConvertFrom','datenum');
 
+    if isfield(dataset, 'gene_struct')
+        dataset = rmfield(dataset, 'gene_struct')
+    end
+    
     collection_dates = [collection_dates, collection_date];
     datasets = [datasets, dataset];
 end

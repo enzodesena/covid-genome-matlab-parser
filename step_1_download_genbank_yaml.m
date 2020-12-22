@@ -28,7 +28,7 @@ if isempty(parser_settings.yaml_filename)
                            'ncov-sequences.yaml');
     
     disp('Downloading COVID-19 metadata from NCBI website');
-    websave(yaml_filename, parser_settings.ncbi_ncov_seq_url);
+    websave(yaml_filename, parser_settings.ncbi_ncov_seq_url_yaml);
     disp('Download completed!');
 end
 

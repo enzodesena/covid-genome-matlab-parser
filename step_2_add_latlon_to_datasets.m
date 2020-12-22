@@ -32,7 +32,7 @@ for n=1:num_files
     filename = dataset_folder_contents(n).name;
     
     % Exclude yaml file in directory
-    if startsWith(filename, '.') || endsWith(filename, '.yaml')
+    if startsWith(filename, '.') || endsWith(filename, '.yaml') || endsWith(filename, '.txt')
         continue;
     end
     
