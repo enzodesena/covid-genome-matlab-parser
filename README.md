@@ -38,8 +38,6 @@ For each entry in the NCBI database, the following information is available:
 * **`latitude`** - The approximate latitude corresponding to the locality (this is only available if step 2 was run).
 * **`longitude`** - The approximate longitude corresponding to the locality (this is only available if step 2 was run).
 
-If you use step 3 to access the data, everything will be indexed accordingly. So, for instance, the genomic sequence of the first measurement is `datasets(1).genebank_entry.Sequence`.
-
 ## Contributing
 
 Pull requests are welcome.
