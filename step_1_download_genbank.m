@@ -95,7 +95,7 @@ while (~was_downloaded)
         end
     end
     
-    if was_downloaded
+    if was_downloadede
         handle_genbank_entry(genbank_entry, filepath, parser_settings);
     end
 end
@@ -130,8 +130,6 @@ if strlength(collection_date) ~= 10
     disp(strcat('Tagged to be ignored because collection date incorrectly formatted:"',collection_date,'"'));
     to_be_ignored = true;
     collection_date = 0;
-else
-    collection_date = datenum(collection_date, 'yyyy-mmm-dd');
 end
 
 
@@ -140,7 +138,9 @@ if ~is_homo_sapiens
     to_be_ignored = true;
 end
 
-save(filepath, 'genbank_entry', 'locality', 'collection_date', 'accession', 'to_be_ignored');
+sequence = genbank_entry.Sequence;
+
+save(filepath, 'sequence', 'locality', 'collection_date', 'accession', 'to_be_ignored');
 
 disp('Saved successfully!');
 
