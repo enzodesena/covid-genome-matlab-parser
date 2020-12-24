@@ -48,7 +48,6 @@ Pull requests are welcome.
 
 The project uses:
 * **Yauhen Yakimovich**'s *yamlmatlab* [Github repo](https://github.com/ewiger/yamlmatlab)
-* **Joel Feenstra**'s *parse_json* [Mathworks File Exchange](https://mathworks.com/matlabcentral/fileexchange/20565-json-parser)
 
 
 ## License
