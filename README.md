@@ -25,7 +25,7 @@ No need for installation. Clone/download and you are ready to go!
 In order to avoid repetition of operations that are costly either in terms of computation or bandwidth, the software is divided into steps:
 
 * **step_1_download_genbank** - This will download all the sequences into a directory `dataset` as individual `.mat` files. Re-running this script will only download files that are not present in the `dataset` directory, so you can run it again to keep your dataset up-to-date with the NCBI dataset. 
-* **step_1_download_genbank_yaml_deprecated** - This will download all the sequences into a directory `dataset` as individual `.mat` files. Re-running this script will only download files that are not present in the `dataset` directory, so you can run it again to keep your dataset up-to-date with the NCBI dataset. This script uses an old YAML file that NCBI no longer makes available, so running this script will result in a 404 error. The old files associated to this YAML files are still contained in the ``dataset`` folder and are bundled together with the new ones using the ``step_3_bundle_datasets`` script. 
+* **step_1_download_genbank_yaml_deprecated** - This will download all the sequences into a directory `dataset` as individual `.mat` files. Re-running this script will only download files that are not present in the `dataset` directory, so you can run it again to keep your dataset up-to-date with the NCBI dataset. This script uses an old YAML file that NCBI no longer makes available, so running this script will result in a 404 error. The old files associated to this YAML files are still contained in the ``dataset`` folder and are bundled together with the new ones. 
 
 
 ### Structure of dataset
@@ -33,7 +33,7 @@ In order to avoid repetition of operations that are costly either in terms of co
 For each entry in the NCBI database, the following information is available:
 * **`accession`** - This is the string identifying the specific genome of this entry. 
 * **`collection_date`** - This is the date of collection, in Matlab's datenum format. To convert to a readable quantity you can run `datetime(double(dataset.collection_date),'ConvertFrom','datenum');`
-* **`sequence`** - This contains the genomic sequence.
+* **`genebank_entry`** - This contains the genome bank entry returned by the NCBI database; **to access the genomic RNA sequence, you'll refer to `dataset.genebank_entry.Sequence`**.
 * **`locality`** - This is the locality of collection (or processing? I am unsure) of the specific genome. When available, not only the country, but also the region/state is specified; in that case, the country and the region/state are separated by a comma. 
 * **`latitude`** - The approximate latitude corresponding to the locality (this is only available if step 2 was run).
 * **`longitude`** - The approximate longitude corresponding to the locality (this is only available if step 2 was run).
