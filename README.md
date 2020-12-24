@@ -26,15 +26,14 @@ In order to avoid repetition of operations that are costly either in terms of co
 
 * **step_1_download_genbank** - This will download all the sequences into a directory `dataset` as individual `.mat` files. Re-running this script will only download files that are not present in the `dataset` directory, so you can run it again to keep your dataset up-to-date with the NCBI dataset. 
 * **step_1_download_genbank_yaml_deprecated** - This will download all the sequences into a directory `dataset` as individual `.mat` files. Re-running this script will only download files that are not present in the `dataset` directory, so you can run it again to keep your dataset up-to-date with the NCBI dataset. This script uses an old YAML file that NCBI no longer makes available, so running this script will result in a 404 error. The old files associated to this YAML files are still contained in the ``dataset`` folder and are bundled together with the new ones using the ``step_3_bundle_datasets`` script. 
-* **step_2_add_latlong_to_dataset** - This step is **optional** and is only needed if you also want to add the latitude and longitude of the locality of individual sequences to the individual datasets. This uses Google Maps API's; if you don't have it already, you'll need to create your own account with Google at [Google Maps Platform](https://cloud.google.com/maps/official).
-* **step_3_bundle_datasets** - This script reads the dataset folders and returns a struct array containing all the datasets. The datasets are returned in chronological order according to the collection data. If you only want to use the data that is already contained in this repository, this is the only step you need to run.
+
 
 ### Structure of dataset
 
 For each entry in the NCBI database, the following information is available:
 * **`accession`** - This is the string identifying the specific genome of this entry. 
 * **`collection_date`** - This is the date of collection, in Matlab's datenum format. To convert to a readable quantity you can run `datetime(double(dataset.collection_date),'ConvertFrom','datenum');`
-* **`genebank_entry`** - This contains the genome bank entry returned by the NCBI database; **to access the genomic RNA sequence, you'll refer to `dataset.genebank_entry.Sequence`**.
+* **`sequence`** - This contains the genomic sequence.
 * **`locality`** - This is the locality of collection (or processing? I am unsure) of the specific genome. When available, not only the country, but also the region/state is specified; in that case, the country and the region/state are separated by a comma. 
 * **`latitude`** - The approximate latitude corresponding to the locality (this is only available if step 2 was run).
 * **`longitude`** - The approximate longitude corresponding to the locality (this is only available if step 2 was run).
