@@ -28,7 +28,7 @@ parser_settings.pause_time = 1;
 parser_settings.yaml_filename = []; 
 
 % The directory where we'll save the datasets.
-parser_settings.dataset_directory_name = 'dataset/'; 
+parser_settings.dataset_directory_name = 'mat-files/'; 
 
 % If set as true, this will ignore sequences that are not complete.
 parser_settings.ignore_sequence_if_incomplete = true; 
