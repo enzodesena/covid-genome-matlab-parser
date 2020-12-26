@@ -65,7 +65,7 @@ disp(strcat('Done! Handled n.',num2str(N),' accessions'));
 function handle_accession_entry(accession, parser_settings)
 disp('-------');
 
-filepath = strcat(parser_settings.dataset_directory_name, accession, '.mat');
+filepath = strcat(parser_settings.mat_files_directory_name, accession, '.mat');
 
 disp(strcat('Handling accession: ', accession));
 

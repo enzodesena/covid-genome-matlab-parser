@@ -59,7 +59,7 @@ end
 
 accession = gene_struct.accession;
 
-filepath = strcat(parser_settings.dataset_directory_name, accession, '.mat');
+filepath = strcat(parser_settings.mat_files_directory_name, accession, '.mat');
 
 disp(strcat('Handling accession: ', accession));
 
